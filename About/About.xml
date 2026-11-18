@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>CAI 5000 Worker Crash Guard (local)</name>
+  <author>local</author>
+  <packageId>local.cai.workerguard</packageId>
+  <supportedVersions>
+    <li>1.7</li>
+  </supportedVersions>
+  <modDependencies>
+    <li>
+      <packageId>brrainz.harmony</packageId>
+      <displayName>Harmony</displayName>
+      <steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+    </li>
+  </modDependencies>
+  <loadAfter>
+    <li>brrainz.harmony</li>
+    <li>Krkr.rule56</li>
+    <li>local.cai17.standalonepatch</li>
+  </loadAfter>
+  <description>Stops an error on a CAI 5000 background thread from closing the whole game.
+
+CAI 5000 does its fog-of-war and sight work on its own threads. On the .NET build of RimWorld, an error that escapes one of those threads ends the game with no warning. This local patch catches the error, writes the full stack trace to Player.log and to CAI_WorkerGuard.log in the RimWorld data folder, and keeps the thread running.
+
+Load after Harmony, CAI 5000 continued and (if used) CAI 5000 Performance Fix. Does nothing if CAI 5000 is not loaded. Safe to remove at any time.</description>
+</ModMetaData>

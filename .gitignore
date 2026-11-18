@@ -1,0 +1,6 @@
+# Build output (the finished DLL is copied to Assemblies/, which is tracked)
+Source/bin/
+Source/obj/
+*.user
+.vs/
+.idea/
