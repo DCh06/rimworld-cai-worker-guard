@@ -41,3 +41,9 @@ Rebuilding
     cd Source
     dotnet build -c Release
 The DLL is copied to ..\Assemblies automatically. Needs the .NET 10 SDK.
+
+Tags
+----------
+The Progression Modpack [UPDATED 1.7] fix
+CAI 5000 crash fixing
+Rimworld 1.7 modpack crash fix
