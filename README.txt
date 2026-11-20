@@ -19,6 +19,16 @@ What it does
 - If CAI is updated and its worker loop no longer looks like the known one, only
   the last-resort catch is used. If CAI is not loaded, the mod does nothing.
 
+What it does not catch
+----------------------
+On 2026-11-19 the game crashed again with this mod active. That crash happened
+inside the .NET runtime (access violation in coreclr.dll, no crash report), where
+no mod can catch it. What has held so far is one extra line in
+RimWorld.runtimeconfig.json:
+    "System.Runtime.TieredCompilation.QuickJitForLoops": false
+See RUNTIME-CONFIG-WORKAROUND.md for the steps, the cause as far as it is known,
+and how to revert. Tested for one two-hour session so far.
+
 Where to look
 -------------
 Player.log, at startup, should contain:
